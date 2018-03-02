@@ -48,7 +48,7 @@ $this->registerJsFile(
 
  <div class="page-content manager-image">
       <ul class="blocks blocks-100 blocks-xxl-4 blocks-lg-4 blocks-md-3">
-        <li>
+        <li class="li-agregar">
             <div class="card card-shadow card-dropify">
                 <?= Html::beginForm(['concursante/upload-image'], 'post', ['enctype' => 'multipart/form-data','id' => "form-upload-image"]) ?>
                 <?= Html::fileInput("image-upload", "", ["id"=>"input-image-upload", "data-plugin"=>"dropify", "data-max-file-size"=>"50M", "data-allowed-file-extensions"=>"png jpg"])?>
@@ -70,7 +70,7 @@ $this->registerJsFile(
               <img class="overlay-figure overlay-scale" src="<?=Url::base()?>/<?=$imagen->txt_url?>"
               alt="...">
               <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
-                <a class="icon fa-search" href="<?=Url::base()?>/"<?=$imagen->txt_url?>></a>
+                <a class="icon fa-search" href="<?=Url::base()?>/<?=$imagen->txt_url?>"></a>
               </figcaption>
             </figure>
             <div class="card-block">

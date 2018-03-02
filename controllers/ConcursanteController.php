@@ -10,6 +10,7 @@ use app\modules\ModUsuarios\models\EntUsuarios;
 use app\models\Files;
 use app\models\EntImagenesUsuarios;
 use app\models\Calendario;
+use yii\helpers\Url;
 
 
 class ConcursanteController extends Controller{
@@ -55,7 +56,7 @@ class ConcursanteController extends Controller{
         $response = new ResponseServices();
 
         $file = UploadedFile::getInstanceByName("image-upload");
-        $response->result = $file;
+        //$response->result = $file;
 
         if(!$file){
             $response->message = "Imagen nula";
@@ -80,6 +81,8 @@ class ConcursanteController extends Controller{
             if($image->save()){
                 $response->message = "Imagen guardada. Mucha suerte.";
                 $response->status = "success";
+                $response->result['url'] = Url::base()."/".$path;
+                $response->result['date'] = Calendario::getDateComplete($image->fch_creacion);
             }else{
                 $response->message="Ocurrio un problema al guardar en la base de datos.";
                 Files::borrarArchivo($path);
