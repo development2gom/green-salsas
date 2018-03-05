@@ -51,7 +51,10 @@ $(document).ready(function () {
         }
     });
 
-
+    $(".js-terminos-condiciones").on("click", function(e){
+        e.preventDefault();
+        $("#modal-terminos-condiciones").modal("show");
+    });
 
 });
 

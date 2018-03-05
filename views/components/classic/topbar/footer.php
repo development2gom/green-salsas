@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Url;
+
 ?>
 <!-- <footer class="site-footer">
     <div class="site-footer-legal">© <?=
@@ -19,8 +20,8 @@ date('Y')?> <a href="https://2geeksonemonkey.com/">2 Geeks one Monkey</a></div>
   
   <div class="site-footer-right">
     
-      <a href="https://2geeksonemonkey.com/">
-        2 Geeks one Monkey
+      <a class="js-terminos-condiciones" href="#">
+        Términos y condiciones
       </a>
       <img class="footer-logo" src="<?=Url::base()?>/webAssets/images/monkey-logo.png">
   </div>
