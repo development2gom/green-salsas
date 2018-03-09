@@ -11,19 +11,24 @@ date('Y')?> <a href="https://2geeksonemonkey.com/">2 Geeks one Monkey</a></div>
 </footer> -->
 
 <footer class="site-footer">
-  <div class="site-footer-legal">
+  <!-- <div class="site-footer-legal">
       <a href="https://2geeksonemonkey.com/">
         <img class="footer-logo" src="<?=Url::base()?>/webAssets/images/logo.png"></div>
       </a>
       
-  </div>
+  </div> -->
   
-  <div class="site-footer-right">
-    
-      <a class="js-terminos-condiciones" href="#">
+  <div class="row">
+    <div class="col-md-4 offset-4 text-center">
+      <a class="link-terminos js-terminos-condiciones" href="#">
         Términos y condiciones
       </a>
-      <img class="footer-logo" src="<?=Url::base()?>/webAssets/images/monkey-logo.png">
+    </div>
+    <div class="col-md-4">
+      <p class="hashtag">#PonteSalsa</p>
+    </div>
+      <!-- <img class="footer-logo" src="<?=Url::base()?>/webAssets/images/monkey-logo.png"> -->
+
   </div>
     
 </footer> 

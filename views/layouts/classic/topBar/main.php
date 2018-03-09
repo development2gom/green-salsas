@@ -33,7 +33,10 @@ AppAsset::register($this);
   <?php
     Modal::begin([
       'header' => '<h2>Términos y condiciones</h2>',
-      'id'=>'modal-terminos-condiciones'
+      'id'=>'modal-terminos-condiciones',
+      'options'=>[
+        'class'=>'modal-terminos-condiciones'
+      ],
     ]);
 
     echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla tincidunt eros non posuere. Maecenas vel suscipit risus. Fusce fermentum congue fermentum. Vestibulum eget magna nec metus elementum sollicitudin sit amet quis enim. Pellentesque eu lacinia leo. Aenean blandit pretium porttitor. Nam commodo augue non augue ornare, at efficitur neque hendrerit. Integer tincidunt aliquet tortor sit amet gravida. In odio erat, dignissim vel maximus at, tincidunt non libero. Ut viverra ante lacus, in rhoncus dui bibendum et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed consequat at ligula in pretium. Integer mollis sollicitudin nulla a aliquam. Morbi varius, nibh eu gravida lacinia, leo nisl ultrices nunc, vel tristique ex tortor ut magna. Phasellus eu nisi quis libero venenatis faucibus nec at odio. Integer in nisi ac risus lobortis tincidunt.

@@ -31,7 +31,7 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'repeatPassword')->passwordInput(['maxlength' => true, 'placeholder'=>'Repetir contraseña'])->label(false) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Registrarme' : 'Actualizar información', ['class' => "btn btn-success btn-block btn-lg"]) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Registrarme' : 'Actualizar información', ['class' => "btn btn-salsas btn-lg"]) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

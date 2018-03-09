@@ -1,0 +1,75 @@
+/*!
+	-----------------------------------------------------------------------------
+
+	2.0 - Login
+			# Concursante
+
+	-----------------------------------------------------------------------------
+	*/
+
+/*  Concursante
+	======================================= */
+// .body
+// 	@extend .bg-trans
+
+// .page
+// 	@extend .bg-trans
+// 	background: transparent
+
+.bkgd-concursante
+	@extend .bg
+	background-image: url('../images/cargar-foto-bkgd.jpg')
+	position: relative
+	&:before
+		// @extend .bg
+		// @extend .bg-trans
+		background-image: url('../images/cargar-foto-bkgd.jpg')
+	
+	.page-content
+		
+		.card
+			@extend .bg-trans
+			.concursante-form-upload
+				border: 9px double $primary
+				.dropify-wrapper
+					@extend .bg-trans
+					border: none
+					cursor: pointer
+					&:active,
+					&:hover,
+					&:focus
+						outline: none
+					.dropify-message
+						color: $primary
+					.dropify-preview
+						@extend .bg-trans
+
+					&:hover
+						background-color: rgba($primary,.1)
+						background-image: linear-gradient(-45deg, rgba($white,.15) 25%, transparent 25%, transparent 50%, rgba($white,.15) 50%, rgba($white,.15) 75%, transparent 75%, transparent)
+
+				.card-block
+					.btn-save
+						@extend .bg-trans
+						color: $white
+						&:active,
+						&:hover,
+						&:focus
+							background-color: rgba($primary,.45)
+							cursor: pointer
+							outline: none
+
+		.outline-dashed
+			align-items: center
+			border: 6px dashed $primary
+			display: flex
+			justify-content: center
+			min-height: 243px
+			position: relative
+			.card-bg
+				background-position: 50%
+				background-repeat: no-repeat
+				background-size: cover
+				height: 100%
+				position: absolute
+				width: 100%

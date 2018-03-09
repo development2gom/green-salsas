@@ -10,6 +10,12 @@
 	-----------------------------------------------------------------------------
 	*/
 
+/*  Load Overlay
+	======================================= */
+.loader-overlay
+	background-color: $black
+
+
 /*  A
 	======================================= */
 a
@@ -90,16 +96,20 @@ a
 		background-image: -o-linear-gradient($color-primary,$color-primary),-o-linear-gradient($color-gray,$color-gray)
 		background-image: linear-gradient($color-primary,$color-primary),linear-gradient($color-gray,$color-gray)
 
+
+/*  Page
+	======================================= */
+.layout-full
+	.page
+		height: auto
+
 /*  Login
 	======================================= */
 /* Imagen de fondo */
 .page-login-v3
 	&:before
-		background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+)
-		background-image: -webkit-gradient(linear, left top, left bottom, from($bg-primary), to(#3583ca))
-		background-image: -webkit-linear-gradient(top, $bg-primary 0%, #3583ca 100%)
-		background-image: -o-linear-gradient(top, $bg-primary 0%, #3583ca 100%)
-		background-image: url('https://drscdn.500px.org/photo/230473379/q%3D80_m%3D2000/v2?webp=true&sig=8098ec687c2dacf53ba17515209dca4cf6ee1ad91d7e0aae23a217db2089824c')
+		@extend .bg
+
 
 /* Login */
 .login
@@ -111,10 +121,11 @@ a
 	
 	form
 		.form-group
+			.help-block,
 			.help-block.help-block-error
-				color: $error
+				@extend .color-red
 				font-size: .9rem
-				text-align: left
+				@extend .text-left
 
 /*  Header
 	======================================= */
