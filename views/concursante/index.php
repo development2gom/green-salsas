@@ -49,7 +49,7 @@ $this->registerJsFile(
  <div class="page-content manager-image">
 
   <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="col-sm-12 col-md-6 col-lg-4 li-agregar">
     
       <div class="card card-shadow card-dropify">
         <?= Html::beginForm(['concursante/upload-image'], 'post', ['enctype' => 'multipart/form-data','id' => "form-upload-image",'class' => "concursante-form-upload"]) ?>
