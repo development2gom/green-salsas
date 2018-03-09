@@ -9,16 +9,16 @@ use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
 
 $this->title = 'Login';
-$this->params['classBody'] = "page-login-v3 layout-full";
+$this->params['classBody'] = "page-login-v3 layout-full bkgd-login";
 
 ?>
 
-<div class="panel">
+<div class="panel panel-login bg-trans">
 	<div class="panel-body">
-		<div class="brand">
-			<img class="brand-img mb-40" src="<?=Url::base()?>/webAssets/images/logo.png" alt="...">
-		</div>
 
+		<!-- <div class="brand">
+			<img class="brand-img mb-40" src="<?=Url::base()?>/webAssets/images/logo.png" alt="...">
+		</div> -->
 
 		<?php 
 		$form = ActiveForm::begin([
@@ -28,33 +28,39 @@ $this->params['classBody'] = "page-login-v3 layout-full";
 			'fieldConfig' => [
 				"template" => "{input}{label}{error}",
 				"options" => [
-					"class" => "form-group form-material floating",
-					"data-plugin" => "formMaterial"
+					"class" => "form-group",
+					// "data-plugin" => "formMaterial"
 				],
-				"labelOptions" => [
-					"class" => "floating-label"
-				]
+				// "labelOptions" => [
+				// 	"class" => "floating-label"
+				// ]
 			]
 		]); 
 		?>
 
-		<?= $form->field($model, 'username')->textInput(["class"=>"form-control"]) ?>
+		<?= $form->field($model, 'username')->textInput(["class"=>"form-control", 'placeholder'=>'Nombre de usuario'])->label(false) ?>
 
-		<?= $form->field($model, 'password')->passwordInput(["class"=>"form-control"])?>
+		<?= $form->field($model, 'password')->passwordInput(["class"=>"form-control", 'placeholder'=>'Contraseña'])->label(false)?>
 
-		<div class="form-group clearfix">
-			<a class="float-right" href="<?=Url::base()?>/peticion-pass">¿Olvidaste tu contraseña?</a>
+		<?= Html::submitButton('<span class="ladda-label">Ingresa</span>', ["data-style"=>"zoom-in", 'class' => 'btn btn-salsas btn-lg ladda-button', 'name' => 'login-button'])
+		?>
+
+		<div class="form-group">
+			<a class="btn btn-salsas btn-lg" href="<?=Url::base()?>/sign-up">Crear cuenta</a>
 		</div>
 
-		<?= Html::submitButton('<span class="ladda-label">Ingresar</span>', ["data-style"=>"zoom-in", 'class' => 'btn btn-primary btn-block btn-lg mt-20 ladda-button', 'name' => 'login-button'])
-		?>
-		<div class="form-group clearfix text-center mt-20">
-			<a href="<?=Url::base()?>/sign-up">Necesito una cuenta</a>
+		<div class="form-group">
+			<a class="link" href="<?=Url::base()?>/peticion-pass">Recupera tu contraseña</a>
 		</div>
 
 		<?php ActiveForm::end(); ?>
 
+		<div class="panel-login-footer">
+			<img src="<?=Url::base()?>/webAssets/images/logo-somos-chingones.png" alt="">
+			<p class="hashtag">#PonteSala</p>
+		</div>
 
-		<p class="soporteTxt">¿Necesitas ayuda? escribe a: <a class="no-redirect" href="mailto:soporte@2gom.com.mx?Subject=Solicitud%de%Soporte">soporte@2gom.com.mx</a></p>
+
+		<!-- <p class="soporteTxt">¿Necesitas ayuda? escribe a: <a class="no-redirect" href="mailto:soporte@2gom.com.mx?Subject=Solicitud%de%Soporte">soporte@2gom.com.mx</a></p> -->
 	</div>
 </div>
