@@ -4,15 +4,36 @@ use yii\helpers\Url;
 use app\models\Calendario;
 
 ?>
-<div class="card card-shadow">
-    <figure class="card-img-top overlay-hover overlay">
-        <img class="overlay-figure overlay-scale" src="<?=Url::base()?>/<?=$model->txt_url?>"
-        alt="...">
-        <figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">
-        <a class="icon fa-search" href="<?=Url::base()?>/"<?=$model->txt_url?>></a>
-        </figcaption>
-    </figure>
-    <div class="card-block">
-        <h4 class="card-title"><?=Calendario::getDateComplete($model->fch_creacion)?> - <?=$model->usuario->nombreCompleto?></h4>
+
+
+<div class="card outline-dashed">
+    <div class="card-bg" style="background-image: url(<?=Url::base()?>/<?=$model->txt_url?>);">
+        <div class="winner">
+            <?php
+            if($model->b_ganadora){
+            ?>
+                Ganadora
+            <?php
+            }else{
+            ?>
+                
+            <?php
+            }
+            ?>
+        </div>
+        <div class="overlay-panel overlay-background overlay-fade overlay-icon">
+            <?php
+            if($model->b_ganadora){
+            ?>
+                <a href="" data-token="<?=$model->id_imagen_usuario?>" class="icon wb-thumb-down unmark-winner"></a>
+            <?php
+            }else{
+            ?>
+                <a href="" data-token="<?=$model->id_imagen_usuario?>" class="icon wb-thumb-up mark-winner"></a>
+            <?php
+            }
+            ?>
+        </div>
+
     </div>
 </div>

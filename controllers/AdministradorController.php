@@ -11,6 +11,8 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\components\AccessControlExtend;
 use app\models\EntImagenesUsuariosSearch;
+use app\models\ResponseServices;
+use app\models\EntImagenesUsuarios;
 
 class AdministradorController extends Controller
 {
@@ -55,4 +57,42 @@ class AdministradorController extends Controller
         
     }
     
+
+    public function actionGanadora($token=null){
+        $response = new ResponseServices();
+        $imagen = EntImagenesUsuarios::find()->where(["id_imagen_usuario"=>$token])->one();
+
+        if(!$imagen){
+            $response->message = "No se encontro el registro para el token:".$token;
+            return $response;
+        }
+
+        $imagen->b_ganadora = 1;
+        if($imagen->save()){
+            $response->status = "success";
+            $response->message = "Cambios correctos";
+            $response->result = '<a href="" data-token="'.$imagen->id_imagen_usuario.'" class="icon wb-thumb-down unmark-winner"></a>';
+        };
+
+        return $response;
+    }
+
+    public function actionDesGanadora($token=null){
+        $response = new ResponseServices();
+        $imagen = EntImagenesUsuarios::find()->where(["id_imagen_usuario"=>$token])->one();
+
+        if(!$imagen){
+            $response->message = "No se encontro el registro para el token:".$token;
+            return $response;
+        }
+
+        $imagen->b_ganadora = 0;
+        if($imagen->save()){
+            $response->status = "success";
+            $response->message = "Cambios correctos";
+            $response->result = '<a href="" data-token="'.$imagen->id_imagen_usuario.'" class="icon wb-thumb-up mark-winner"></a>';
+        };
+
+        return $response;
+    }
 }
