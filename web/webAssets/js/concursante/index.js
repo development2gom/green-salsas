@@ -48,6 +48,7 @@ $(document).ready(function(){
                                         '</div>'+
                                     '</div>';
                     $( template ).insertAfter( ".li-agregar" );
+                    $(".dropify-clear").trigger("click");
                     
                 }else{
                     swal("Espera", data.message, "error");
