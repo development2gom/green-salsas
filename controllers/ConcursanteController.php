@@ -98,4 +98,8 @@ class ConcursanteController extends Controller{
         return $response;
     }
 
+    public function actionGanadores(){
+        
+    }
+
 }
