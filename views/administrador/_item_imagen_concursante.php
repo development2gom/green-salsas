@@ -8,19 +8,21 @@ use app\models\Calendario;
 
 <div class="card outline-dashed">
     <div class="card-bg" style="background-image: url(<?=Url::base()?>/<?=$model->txt_url?>);">
-        <div class="winner">
-            <?php
-            if($model->b_ganadora){
-            ?>
+       
+        <?php
+        if($model->b_ganadora){
+        ?>
+            <div class="winner">
                 Ganadora
-            <?php
-            }else{
-            ?>
-                
-            <?php
-            }
-            ?>
-        </div>
+            </div>
+        <?php
+        }else{
+        ?>
+            
+        <?php
+        }
+        ?>
+        
         <div class="overlay-panel overlay-background overlay-fade overlay-icon">
             <?php
             if($model->b_ganadora){

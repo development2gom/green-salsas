@@ -48,6 +48,13 @@ $this->registerJsFile(
 
  <div class="page-content manager-image">
 
+  <!-- <div class="titler-fin-concurso">
+    <h3>Fin del concurso</h3>
+    <button class="btn btn-salsas">
+      <span class='ladda-label'>+ Ver ganadores</span>
+    </button>
+  </div> -->
+
   <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-4 li-agregar">
     

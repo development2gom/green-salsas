@@ -42,6 +42,14 @@
 
 	&.btn-lg
 		width: 100%
+	
+	+respond-to(xs)
+		border: 7px double $primary
+		font-size: 1.325rem
+
+	+respond-to(sl)
+		border: 6px double $primary
+		font-size: 1.125rem
 
 .color-yellow
 	color: $yellow
@@ -105,6 +113,13 @@
 		color: rgba($white,.3)
 		font-size: 1.35rem
 		font-weight: $regular
+	+respond-to(xs)
+		font-size: 1.125rem
+		height: 54px
+	+respond-to(sl)
+		border: 6px double $primary
+		font-size: .9rem
+		height: 48px
 
 .letter-spacing-1
 	letter-spacing: 1px
@@ -179,6 +194,44 @@
 
 .text-decoration-none
 	text-decoration: none
+
+.titler,
+.titler-fin-concurso
+	align-items: center
+	display: flex
+	justify-content: center
+	margin-bottom: 32px
+	h2
+		background-color: $secondary
+		border: 9px double $primary
+		color: $white
+		display: inline-block
+		font-size: 1.75rem
+		font-weight: $bold
+		padding: .7rem 3.25rem
+		@extend .text-center
+		text-transform: uppercase
+		+respond-to(xs)
+			font-size: 1.325rem
+		+respond-to(sl)
+			border: 6px double $primary
+			font-size: 1.025rem
+	
+.titler-fin-concurso
+	flex-direction: column
+	h3
+		color: $white
+		display: inline-block
+		font-size: 1.75rem
+		font-weight: $bold
+		margin-bottom: 8px
+		padding: .7rem 3.25rem
+		@extend .text-center
+		text-transform: uppercase
+		+respond-to(xs)
+			font-size: 1.325rem
+		+respond-to(sl)
+			font-size: 1.025rem
 
 
 /*  Listado

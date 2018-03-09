@@ -7,15 +7,8 @@
 	-----------------------------------------------------------------------------
 	*/
 
-/*  Concursante
+/*  Concursante - Index
 	======================================= */
-// .body
-// 	@extend .bg-trans
-
-// .page
-// 	@extend .bg-trans
-// 	background: transparent
-
 .bkgd-concursante
 	@extend .bg
 	background-image: url('../images/cargar-foto-bkgd.jpg')
@@ -25,10 +18,13 @@
 		// @extend .bg-trans
 		background-image: url('../images/cargar-foto-bkgd.jpg')
 	
-	.page-content
-		
+	
+	.page-content,
+	.manager-image
 		.card
 			@extend .bg-trans
+			margin-bottom: 12px
+
 			.concursante-form-upload
 				border: 9px double $primary
 				.dropify-wrapper
@@ -58,14 +54,65 @@
 							background-color: rgba($primary,.45)
 							cursor: pointer
 							outline: none
-			
-			.winner
-				padding-top: 5px;
-				background: green;
-				color: white;
-				text-align: center;
-				padding-bottom: 5px;
 
+	
+
+	.page-content
+
+		.winner
+			padding-top: 8px
+			background: green
+			color: white
+			text-align: center
+			padding-bottom: 6px
+			text-transform: uppercase
+			font-size: 1.25rem
+
+		.outline-double,
+		.outline-dashed
+			align-items: center
+			// border: 6px dashed $primary
+			display: flex
+			justify-content: center
+			min-height: 243px
+			position: relative
+			.card-bg
+				background-position: 50%
+				background-repeat: no-repeat
+				background-size: cover
+				height: 100%
+				position: absolute
+				width: 100%
+
+		.outline-dashed
+			border: 9px double $primary
+
+		.outline-double
+			border: 9px double $primary
+
+		.card-text
+			color: $white
+			font-size: 1.45rem
+			font-weight: $bold
+			text-align: center
+			text-transform: uppercase
+		
+		.summary
+			color: rgba($white, .45)
+			display: flex
+			font-size: .9rem
+			font-weight: $light
+			justify-content: flex-end
+			margin-bottom: 0
+			padding: 16px 14px 0
+			width: 100%
+			b
+				color: $primary
+				font-weight: $bold
+				margin: 0 8px
+
+	.manager-image
+		.outline-double,
 		.outline-dashed
 			align-items: center
 			border: 6px dashed $primary
@@ -80,3 +127,9 @@
 				height: 100%
 				position: absolute
 				width: 100%
+
+/*  Concursante - Ganadores
+	======================================= */
+
+/*  Administrador - Index
+	======================================= */

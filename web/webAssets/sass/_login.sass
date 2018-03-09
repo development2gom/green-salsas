@@ -13,10 +13,20 @@
 	&:before
 		@extend .bg
 		background-image: url('../images/login-bkgd.jpg')
+		+respond-to(sl)
+			background-position: 40% center
 
 	.page-content
 		margin-right: 5vw
-		
+		+respond-to(xs)
+			margin-right: 0
+			padding: 30px 0 20px
+
+	.panel
+		+respond-to(xs)
+			margin-right: 0
+			padding: 10px 4px
+
 	.panel-login
 
 		form
@@ -26,6 +36,11 @@
 				input[type="password"],
 				input[type="text"]
 					@extend .input
+					+respond-to(xs)
+						font-size: .9rem
+				
+				input[type="password"]
+					text-transform: none
 				
 				.help-block
 					&.help-block-error
@@ -50,6 +65,8 @@
 				@extend .letter-spacing-1
 				@extend .text-center
 				@extend .text-decoration-line
+				+respond-to(sl)
+					font-size: .9rem
 
 		.panel-login-footer
 			img
