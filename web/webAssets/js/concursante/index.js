@@ -42,19 +42,11 @@ $(document).ready(function(){
                 if(data.status=="success"){
                     swal("Perfecto", data.message, "success");
 
-                    var template = '<li><div class="card card-shadow">'+
-                    '<figure class="card-img-top overlay-hover overlay">'+
-                    '<img class="overlay-figure overlay-scale" src="'+data.result.url+'"'+
-                    'alt="...">'+
-                    '<figcaption class="overlay-panel overlay-background overlay-fade overlay-icon">'+
-                        '<a class="icon fa-search" href="'+data.result.url+'">></a>'+
-                    '</figcaption>'+
-                    '</figure>'+
-                    '<div class="card-block">'+
-                    '<h4 class="card-title">'+data.result.date+'</h4>'+
-                    '</div>'+
-                    '</div>'+
-                    '</li>';
+                    var template = '<div class="col-sm-12 col-md-6 col-lg-4">'+
+                                        '<div class="card outline-dashed">'+
+                                        '<div class="card-bg" style="background-image: url('+data.result.url+');"></div>'+
+                                        '</div>'+
+                                    '</div>';
                     $( template ).insertAfter( ".li-agregar" );
                     
                 }else{

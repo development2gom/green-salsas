@@ -99,7 +99,9 @@ class ConcursanteController extends Controller{
     }
 
     public function actionGanadores(){
-        
+        $imagenesGanadoras = EntImagenesUsuarios::find()->where(["b_ganadora"=>1])->all();
+
+        return $this->render("ganadores", ["ganadores"=>$imagenesGanadoras]);
     }
 
 }
