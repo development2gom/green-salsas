@@ -235,7 +235,7 @@ a[x-apple-data-detectors=true] {
                   
                     <div align="center" class="img-container center  autowidth  fullwidth " style="padding-right: 0px;  padding-left: 0px;">
 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px;line-height:0px;"><td style="padding-right: 0px; padding-left: 0px;" align="center"><![endif]-->
-  <img class="center  autowidth  fullwidth" align="center" border="0" src="http://dev.2geeksonemonkey.com/ryg/gestor-localidades/web/webAssets/images/logo-ryg.png" alt="Abogados RYG" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;width: 160px;max-width: 100%" width="160">
+  
 <!--[if mso]></td></tr></table><![endif]-->
 </div>
 
@@ -289,7 +289,8 @@ a[x-apple-data-detectors=true] {
 	<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;"><![endif]-->
 	<div style="line-height:200%;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 30px; padding-left: 30px; padding-top: 10px; padding-bottom: 10px;">	
         <div style="line-height:24px;font-size:12px;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif;text-align:left;">
-            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: justify;"><span style="font-size: 16px; line-height: 32px;">Este correo es para notificarte que <strong style="font-family: Verdana; font-size: 14px; font-style: italic; font-weight: bold;">has sido agregado</strong> a un grupo de trabajo dentro de la plataforma “Regalado y galindo - Gestor de localidades”, para poder <strong style="font-family: Verdana; font-size: 14px; font-style: italic; font-weight: bold;">acceder</strong> al sistema da click en la siguiente liga:</span></p>
+            <p style="margin: 0;font-size: 12px;line-height: 24px;text-align: justify;"><span style="font-size: 16px; line-height: 32px;">
+              Da click en la siguiente liga para recuperar tu contraseña:
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br></p>
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">
 
@@ -339,9 +340,9 @@ a[x-apple-data-detectors=true] {
 	<div style="color:#555555;line-height:120%;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif; padding-right: 20px; padding-left: 20px; padding-top: 40px; padding-bottom: 20px;">	
 		<div style="font-size:12px;line-height:14px;color:#555555;font-family:'Verdanaf', Georgia, Times, 'Times New Roman', serif;text-align: center;">
 
-            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">Este correo electrónico fue generado de manera automática por el sistema y no es necesario contestes a el, si necesitas asistencia o soporte favor de escribirme a: <a href="mailto:ayuda@ryg.com.mx?Subject=Ayuda%20Web" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #2B3736; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300; color: #3C86E9; font-size: 14px; line-height: 16px;"><span style="font-size: 14px; line-height: 20px;" data-mce-style="font-size: 14px; line-height: 20px; color: #2B3736;">ayuda@ryg.com.mx</span></a></p>
+            <p style="margin: 0;font-size: 14px;line-height: 24px;text-align: justify;">Este correo electrónico fue generado de manera automática por el sistema y no es necesario contestes a el, si necesitas asistencia o soporte favor de escribirme a: <a href="mailto:ayuda@2gom.com.mx?Subject=Ayuda%20Web" target="_blank" style="display: inline-block;text-decoration: none;-webkit-text-size-adjust: none;text-align: left;color: #2B3736; width: auto; font-family: 'Verdanaf', Georgia, Times, 'Times New Roman', serif; mso-border-alt: none; font-weight: 300; color: #3C86E9; font-size: 14px; line-height: 16px;"><span style="font-size: 14px; line-height: 20px;" data-mce-style="font-size: 14px; line-height: 20px; color: #2B3736;">ayuda@2gom.com.mx</span></a></p>
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br><br></p>
-            <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;">&copy; Regalado y Galindo Abogados 2018 </p>
+            
             <p style="margin: 0;line-height: 24px;text-align: left;font-size: 12px" dir="ltr">&#160;<br><br></p>
             <p style="margin: 0;font-size: 14px;line-height: 17px;text-align: center;"><img class="center  autowidth  fullwidth" align="center" border="0" src="http://dev.2geeksonemonkey.com/ryg/gestor-localidades/web/webAssets/images/2gom-black.png" alt="2GOM" title="Image" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: block !important;border: 0;height: auto;float: none;margin: 0 auto; width: 108px;max-width: 100%" width="108"></p>
         </div>	

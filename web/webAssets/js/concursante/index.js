@@ -12,6 +12,9 @@ function validarImagen(input){
 }
 
 $(document).ready(function(){
+
+    $("#modal-carga").modal("show");
+
     btnLadda = Ladda.create(btnSubmit);
 
     $(btnSubmit).on("click", function(e){

@@ -6,4 +6,6 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php
 
 
-php_value memory_limit 512M
+<IfModule mod_php5.c>
+php_value memory_limit 64M
+</IfModule>

@@ -2,6 +2,8 @@ var inputFile = $("#entusuarios-image");
 var tamanioAdmitido = 3;
 var tipoImagenesAdmitidas = ["image/jpeg", "image/png", "image/jpg", "image/gif"];
 $(document).ready(function () {
+
+    
     $(".js-img-avatar").on("click", function (e) {
         e.preventDefault();
         inputFile.trigger("click");
