@@ -64,3 +64,5 @@ $this->params['classBody'] = "page-login-v3 layout-full bkgd-login";
 		<!-- <p class="soporteTxt">¿Necesitas ayuda? escribe a: <a class="no-redirect" href="mailto:soporte@2gom.com.mx?Subject=Solicitud%de%Soporte">soporte@2gom.com.mx</a></p> -->
 	</div>
 </div>
+<?php
+$this->params['modal'] = $this->render("//concursante/_modal-registro");

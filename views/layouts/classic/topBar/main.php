@@ -39,20 +39,40 @@ AppAsset::register($this);
       ],
     ]);
 
-    echo 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla tincidunt eros non posuere. Maecenas vel suscipit risus. Fusce fermentum congue fermentum. Vestibulum eget magna nec metus elementum sollicitudin sit amet quis enim. Pellentesque eu lacinia leo. Aenean blandit pretium porttitor. Nam commodo augue non augue ornare, at efficitur neque hendrerit. Integer tincidunt aliquet tortor sit amet gravida. In odio erat, dignissim vel maximus at, tincidunt non libero. Ut viverra ante lacus, in rhoncus dui bibendum et. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed consequat at ligula in pretium. Integer mollis sollicitudin nulla a aliquam. Morbi varius, nibh eu gravida lacinia, leo nisl ultrices nunc, vel tristique ex tortor ut magna. Phasellus eu nisi quis libero venenatis faucibus nec at odio. Integer in nisi ac risus lobortis tincidunt.
-
-    Duis convallis vulputate auctor. Nunc et neque eget ipsum vulputate vehicula et sed lacus. Vestibulum pulvinar ligula et vulputate finibus. Cras id odio commodo ligula vestibulum elementum in eget elit. Vivamus tempor posuere eleifend. Nullam eget ipsum massa. Quisque eu scelerisque massa, in vulputate mi. Praesent est metus, ornare in diam in, volutpat imperdiet eros. Nunc in eros et arcu euismod vulputate. Vestibulum vel condimentum nulla. Sed eget semper neque. Donec rutrum pharetra sagittis. Morbi tristique vulputate aliquam. Nam quis eros sapien. Suspendisse potenti.
+    echo '¿CÓMO PARTICIPAR?
+    •	Participan mayores de edad.
+    •	Del 15 de marzo al 15 de abril de 2018 podrás registrar a tu POC en el concurso #pontesalsa
+    •	Tendrás que subir diariamente en un horario de 11:00 am a 11:00 pm 3 fotografías donde se aprecien los siguientes aspectos:  
+    1er foto - Material bien colocado
+    2da foto - Correcta ubicación 
+    3ra foto - Consumidor disfrutando la salsa
+    •	Se cerrará participación el día 15 de abril de 20178 a las 11:00pm
     
-    Quisque nulla magna, feugiat et ultricies ut, condimentum non dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam auctor purus vitae felis ornare, nec accumsan est posuere. Fusce feugiat vel tellus eget viverra. Morbi venenatis vel nunc ut volutpat. Suspendisse volutpat enim sed tincidunt iaculis. Ut porttitor lacus at dolor vehicula consectetur. Pellentesque vitae diam felis. Nam a nisi sem.
+    ¿QUÉ PUEDO GANAR? 
+    Si durante el periodo del concurso eres de los primeros 10 POCS en subir las fotos y estas cumplan con los requerimientos, ganarán uno de los 10 kits que incluyen los siguientes beneficios:
     
-    In sed lorem elementum, dignissim sem facilisis, vestibulum augue. Morbi eros enim, eleifend vitae bibendum id, aliquet ac dui. Praesent vestibulum, diam ut fermentum tincidunt, tortor erat vestibulum nisi, non gravida mauris velit ac velit. Vivamus feugiat pretium imperdiet. In elementum laoreet felis id rhoncus. Phasellus pharetra pulvinar tortor nec finibus. Pellentesque nec erat turpis.
+    Una pantalla de 40” para el Dueño del POC
+    Un smartphone para el gerente del POC 
+    Un monedero Walmart de $300 para mesero/fuerza de venta
     
-    Phasellus eleifend hendrerit tristique. Phasellus rhoncus dictum metus et sagittis. Aliquam quis augue ac nulla maximus varius eu in felis. Pellentesque hendrerit, velit eu vestibulum gravida, odio elit bibendum sapien, a tempor nisl sapien et ipsum. Ut sit amet euismod diam, sit amet tempor neque. Nam vel elit non urna sagittis aliquet. In accumsan eget lectus vitae convallis.';
+    Para los siguientes 10 negocios que hayan cumplido al menos el 75% del programa recibirán un monedero Liverpool de $2,000.00
+    
+    *Indispensable presentar identificación oficial vigente para hacer entrega del incentivo. Los kits se entregarán al administrador del POC 
+    
+    RESTRICCIONES
+    •	El formato de la fotografía debe ser en formato JPG, PNG o GIF.
+    •	Se descartarán fotografías que en su contenido muestren desnudos, actos violentos, uso o consumo de sustancias nocivas para la salud (drogas, alcohol) o armas. 
+    •	No participan menores de edad.
+    •	El premio no podrá ser canjeado por dinero en efectivo.
+    
+    RESPONSABLE DEL CONCURSO
+    El organizador responsable y encargado de la promoción es PUBLICIDAD Y SOLUCIONES GREEN S.A DE C.V PSG061123PQ9 con domicilio en Santa Brígida 19, Jardines de Santa Mónica, C.P. 54050, Tlalnepantla de Baz Estado de México.';
 
     Modal::end();
     ?>
   <?php $this->endBody();?>
  
+  <?=isset($this->params['modal'])?$this->params['modal']:''?>
 
   <script>
   (function(document, window, $) {

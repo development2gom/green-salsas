@@ -86,3 +86,5 @@ $this->registerJsFile(
   </div>
 
 </div>
+<?php
+$this->params['modal'] = $this->render("//concursante/_modal-carga");

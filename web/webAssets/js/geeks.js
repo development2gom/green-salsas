@@ -2,6 +2,7 @@
 // ladda: http://msurguy.github.io/ladda-bootstrap/
 
 $(document).ready(function () {
+    $("#modal-registro").modal("show");
     // Animación entre pantallas
     // $(".animsition").animsition({
     //     transition: function(url){},
