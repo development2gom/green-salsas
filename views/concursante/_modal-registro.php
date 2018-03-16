@@ -9,10 +9,15 @@ use yii\bootstrap\Modal;
       ],
     ]);
 
-    echo 'Completa tu registro para participar
-    Publica diariamente 3 fotografías, demuestra porque tu poc más chingon y gana premios
-    Como: pantallas, celulares, tarjetas departamentales y más..
-    Revisa los términos y condiciones.';
+    echo '<h4>Completa tu registro para participar</h4>
+      <p>Publica diariamente 3 fotografías, demuestra porque tu poc más chingon y gana premios Como:</p>
+      <ul>
+        <li>pantallas</li>
+        <li>celulares</li>
+        <li>tarjetas departamentales y más..</li>
+      </ul>
+      <p class="text-italic">Revisa los términos y condiciones.</p>
+    ';
 
     Modal::end();
     ?>
