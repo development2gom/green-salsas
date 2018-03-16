@@ -10,7 +10,7 @@ use yii\bootstrap\Modal;
     ]);
 
     echo '<h4>Completa tu registro para participar</h4>
-      <p>Publica diariamente 3 fotografías, demuestra porque tu poc más chingon y gana premios Como:</p>
+      <p>Publica diariamente 3 fotografías, demuestra porque tu poc es el más chingon y gana premios como:</p>
       <ul>
         <li>pantallas</li>
         <li>celulares</li>
