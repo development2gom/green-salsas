@@ -69,8 +69,14 @@ class ConcursanteController extends Controller{
         $isSaved = true;//$file->saveAs($path);
 
         $fileM = new Files();
-        list($ancho, $alto, $tipo, $atributos) =getimagesize($file->tempName);
-        $fileM->rezisePicture($file->tempName, $ancho, $alto, 800, $path, $file->extension);
+        
+        if($file->extension=="gif"){
+            $file->saveAs($path);
+        }else{
+            list($ancho, $alto, $tipo, $atributos) =getimagesize($file->tempName);
+            $fileM->rezisePicture($file->tempName, $ancho, $alto, 800, $path, $file->extension);
+        }
+        
 
         if($isSaved){
             $image = new EntImagenesUsuarios();

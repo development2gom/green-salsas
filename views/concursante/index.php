@@ -60,7 +60,7 @@ $this->registerJsFile(
     
       <div class="card card-shadow card-dropify">
         <?= Html::beginForm(['concursante/upload-image'], 'post', ['enctype' => 'multipart/form-data','id' => "form-upload-image",'class' => "concursante-form-upload"]) ?>
-          <?= Html::fileInput("image-upload", "", ["id"=>"input-image-upload", "data-plugin"=>"dropify", "data-max-file-size"=>"50M", "data-allowed-file-extensions"=>"png jpg"])?>
+          <?= Html::fileInput("image-upload", "", ["id"=>"input-image-upload", "data-plugin"=>"dropify", "data-max-file-size"=>"50M", "data-allowed-file-extensions"=>"png jpg jpeg gif"])?>
 
           <div class="card-block">
             <h4 class="card-title">
