@@ -4,6 +4,8 @@ use yii\helpers\Url;
 use app\assets\AppAsset;
 use yii\helpers\Html;
 use app\models\Calendario;
+use app\models\Constantes;
+
 // $this->title = "Dashboard";
 $this->params['classBody'] = "site-navbar-small dashboard bkgd-concursante";
 
@@ -46,36 +48,40 @@ $this->registerJsFile(
 
 ?>
 
- <div class="page-content manager-image">
+ <div class="page-content <?= Constantes::CONCURSO_CERRADO ? "" : "manager-image" ?>">
 
-  <!-- <div class="titler-fin-concurso">
-    <h3>Fin del concurso</h3>
-    <button class="btn btn-salsas">
-      <span class='ladda-label'>+ Ver ganadores</span>
-    </button>
-  </div> -->
+  <?php if(Constantes::CONCURSO_CERRADO){ ?>
+    <div class="titler-fin-concurso">
+      <h3>Fin del concurso</h3>
+      <a class="btn btn-salsas" href="<?= Url::base() . '/concursante/ganadores' ?>"> 
+        <span class='ladda-label'>+ Ver ganadores</span>
+      </a>
+    </div>
+  <?php } ?>
 
   <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-4 li-agregar">
-    
-      <div class="card card-shadow card-dropify">
-        <?= Html::beginForm(['concursante/upload-image'], 'post', ['enctype' => 'multipart/form-data','id' => "form-upload-image",'class' => "concursante-form-upload"]) ?>
-          <?= Html::fileInput("image-upload", "", ["id"=>"input-image-upload", "data-plugin"=>"dropify", "data-max-file-size"=>"50M", "data-allowed-file-extensions"=>"png jpg jpeg gif"])?>
+    <?php if(!Constantes::CONCURSO_CERRADO){ ?>    
+      <div class="col-sm-12 col-md-6 col-lg-4 li-agregar">
+      
+        <div class="card card-shadow card-dropify">
+          <?= Html::beginForm(['concursante/upload-image'], 'post', ['enctype' => 'multipart/form-data','id' => "form-upload-image",'class' => "concursante-form-upload"]) ?>
+            <?= Html::fileInput("image-upload", "", ["id"=>"input-image-upload", "data-plugin"=>"dropify", "data-max-file-size"=>"50M", "data-allowed-file-extensions"=>"png jpg jpeg gif"])?>
 
-          <div class="card-block">
-            <h4 class="card-title">
-              <?=Html::submitButton("<span class='ladda-label'>Guardar imagen</span>", ["class"=>"btn btn-save btn-block ladda-button", "id"=>"btn-upload-image", "data-style"=>"zoom-in"])?>
-            </h4>
-          </div>
-        <?=Html::endForm()?>
+            <div class="card-block">
+              <h4 class="card-title">
+                <?=Html::submitButton("<span class='ladda-label'>Guardar imagen</span>", ["class"=>"btn btn-save btn-block ladda-button", "id"=>"btn-upload-image", "data-style"=>"zoom-in"])?>
+              </h4>
+            </div>
+          <?=Html::endForm()?>
+        </div>
       </div>
-    </div>
+    <?php } ?>
 
     <?php
       foreach($imagenesUsuario as $imagen){
     ?>
        <div class="col-sm-12 col-md-6 col-lg-4">
-        <div class="card outline-dashed">
+        <div class='<?= Constantes::CONCURSO_CERRADO ? "card outline-double" : "card outline-dashed" ?>'>
           <div class="card-bg" style="background-image: url(<?=Url::base()?>/<?=$imagen->txt_url?>);"></div>
         </div>
       </div>
