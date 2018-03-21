@@ -29,13 +29,16 @@ class Files{
 		$nuevo_ancho = $ancho * $factor;
 		$nuevo_alto = $alto * $factor;
 
+		
+
 		// Cargar
 		$thumb = imagecreatetruecolor($nuevo_ancho, $nuevo_alto);
 
 		
+		
 		if($extension==="jpg" || $extension==="jpeg"){
 			$origen = imagecreatefromjpeg($file);
-		
+			$origen = $this->getOrientation($file, $origen);
 		// Cambiar el tamaño
 		imagecopyresampled($thumb, $origen, 0, 0, 0, 0, $nuevo_ancho, $nuevo_alto, $ancho, $alto);
 		imagejpeg($thumb, $nombreNuevo);
@@ -46,7 +49,32 @@ class Files{
 			imagecopyresampled($thumb, $origen, 0, 0, 0, 0, $nuevo_ancho, $nuevo_alto, $ancho, $alto);
 			imagepng($thumb, $nombreNuevo);
 		}
+
 		
+
+		
+	}
+
+	public function getOrientation($file, $new){
+		$exif = exif_read_data($file);
+		if(isset($exif["Orientation"])){
+			$orientation = $exif['Orientation'];
+			switch($orientation) {
+				case 3:
+					$image_p = imagerotate($new, 180, 0);
+					break;
+				case 6:
+					$image_p = imagerotate($new, -90, 0);
+					break;
+				case 8:
+					$image_p = imagerotate($new, 90, 0);
+					break;
+			}
+
+			return $image_p;
+		}else{
+			return $new;
+		}	
 	}
     
     /**

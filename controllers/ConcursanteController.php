@@ -71,11 +71,11 @@ class ConcursanteController extends Controller{
         $fileM = new Files();
         
         if($file->extension=="gif"){
-            $file->saveAs($path);
-        }else{
-            list($ancho, $alto, $tipo, $atributos) =getimagesize($file->tempName);
-            $fileM->rezisePicture($file->tempName, $ancho, $alto, 800, $path, $file->extension);
-        }
+             $file->saveAs($path);
+         }else{
+             list($ancho, $alto, $tipo, $atributos) =getimagesize($file->tempName);
+             $fileM->rezisePicture($file->tempName, $ancho, $alto, 800, $path, $file->extension);
+         }
         
 
         if($isSaved){
