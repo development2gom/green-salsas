@@ -2,12 +2,12 @@
 
 use yii\helpers\Url;
 use app\models\Calendario;
-
+$usuario = $model->usuario;
 ?>
 
 
 <div class="card outline-dashed">
-    <div class="card-bg" style="background-image: url(<?=Url::base()?>/<?=$model->txt_url?>);">
+    <div class="card-bg" id="contenedor-imagen-<?=$model->id_imagen_usuario?>" style="background-image: url(<?=Url::base()?>/<?=$model->txt_url?>);">
        
         <?php
         if($model->b_ganadora){
@@ -28,6 +28,7 @@ use app\models\Calendario;
             if($model->b_ganadora){
             ?>
                 <a href="" data-token="<?=$model->id_imagen_usuario?>" class="icon wb-thumb-down unmark-winner"></a>
+                
             <?php
             }else{
             ?>
@@ -35,7 +36,12 @@ use app\models\Calendario;
             <?php
             }
             ?>
+            
         </div>
-
+        <div class="card-block" >
+              <h4 class="card-title" style="color:white"><?=$usuario->nombreCompleto?> <small><?=$usuario->txt_email?></small> </h4>
+        </div>
     </div>
+
+    
 </div>

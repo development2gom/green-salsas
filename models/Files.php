@@ -40,7 +40,7 @@ class Files{
 			$origen = imagecreatefromjpeg($file);
 
 
-			$exif = exif_read_data($file);
+			$exif = \exif_read_data($file);
 			if(isset($exif["Orientation"])){
 				$orientation = $exif['Orientation'];
 				switch($orientation) {
@@ -86,7 +86,7 @@ class Files{
 	}
 
 	public function getOrientation($file, $new){
-		$exif = exif_read_data($file);
+		$exif = \exif_read_data($file);
 		if(isset($exif["Orientation"])){
 			$orientation = $exif['Orientation'];
 			switch($orientation) {

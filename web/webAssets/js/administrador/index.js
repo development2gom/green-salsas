@@ -21,6 +21,7 @@ $(document).on({
                     success: function (r) {
                         if (r.status == "success") {
                             elemento.replaceWith(r.result);
+                            $("#contenedor-imagen-"+token).prepend('<div class="winner">Ganadora</div>');
                         }
                     },
                     error: function (r) {
@@ -54,6 +55,7 @@ $(document).on({
                     success: function (r) {
                         if (r.status == "success") {
                             elemento.replaceWith(r.result);
+                            $("#contenedor-imagen-"+token+" .winner").remove();
                         }
                     },
                     error: function (r) {

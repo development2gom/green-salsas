@@ -76,3 +76,14 @@
 	-----------------------------------------------------------------------------
 	*//* line 15, Applications/MAMP/htdocs/green/salsas/web/webAssets/sass/_footer.sass */.site-footer{border-top:1px solid transparent}/* line 17, Applications/MAMP/htdocs/green/salsas/web/webAssets/sass/_footer.sass */.site-footer .link-terminos{color:#fff;display:inline-block;font-size:1.05rem}/* line 1, Applications/MAMP/htdocs/green/salsas/web/webAssets/sass/_custom.sass */.manager-image .dropify-wrapper{height:182px}/* line 4, Applications/MAMP/htdocs/green/salsas/web/webAssets/sass/_custom.sass */.page-content .card-dropify .card-block{padding:0}/* line 7, Applications/MAMP/htdocs/green/salsas/web/webAssets/sass/_custom.sass */.card-dropify .btn{padding:12px 20px;border-radius:0}
 /*# sourceMappingURL=site-extend.css.map */
+
+.card-bg:hover .card-block{
+	display:block;
+}
+
+.card-block{
+	
+	position:absolute; 
+	bottom:0; 
+	display:none;
+}

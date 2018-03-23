@@ -13,6 +13,7 @@ use app\components\AccessControlExtend;
 use app\models\EntImagenesUsuariosSearch;
 use app\models\ResponseServices;
 use app\models\EntImagenesUsuarios;
+use app\models\EntUsuariosSearch;
 
 class AdministradorController extends Controller
 {
@@ -55,6 +56,16 @@ class AdministradorController extends Controller
 
         return $this->render("index", ["dataProvider"=>$dataProvider]);
         
+    }
+
+    public function actionUsuarios(){
+        $searchModel = new EntUsuariosSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('//usuarios/index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
     
 
