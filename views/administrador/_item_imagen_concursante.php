@@ -6,7 +6,7 @@ $usuario = $model->usuario;
 ?>
 
 
-<div class="card outline-dashed">
+<div class="card outline-dashed admin">
     <div class="card-bg" id="contenedor-imagen-<?=$model->id_imagen_usuario?>" style="background-image: url(<?=Url::base()?>/<?=$model->txt_url?>);">
        
         <?php
