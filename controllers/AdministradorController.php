@@ -106,4 +106,59 @@ class AdministradorController extends Controller
 
         return $response;
     }
+
+
+    public function actionDescargarInfo(){
+        
+        $imagenes = EntImagenesUsuarios::find()->orderBy("fch_creacion")->all();
+		$arrayCsv = [ ];
+		$i = 0;
+		foreach ( $imagenes as $data ) {
+            $usuario = $data->usuario;
+			$arrayCsv [$i] ['nombreCompleto'] = $usuario->nombreCompleto;
+			$arrayCsv [$i] ['txtEmail'] = $usuario->txt_email;
+			$arrayCsv [$i] ['fchRegistro'] = $usuario->fch_creacion;
+			$arrayCsv [$i] ['fchImagenUpload'] = $data->fch_creacion;
+			
+			$i++;
+		}
+
+        $this->downloadSendHeaders ( 'reporte.csv' );
+		Yii::$app->response->content = $this->array2Csv ( $arrayCsv );
+    }
+
+    private function array2Csv($array) {
+		if (count ( $array ) == 0) {
+			return null;
+		}
+		ob_start();
+		$df = fopen ( "php://output", "w" );
+		fputcsv ( $df, [
+				'Nombre completo',
+				'Email',
+				'Fecha registro',
+				'Fecha imagen cargada',
+		]
+		 );
+		foreach ( $array as $row ) {
+			fputcsv ( $df, $row );
+		}
+		fclose ( $df );
+		return ob_get_clean();
+	}
+	private function downloadSendHeaders($filename) {
+		// disable caching
+		$now = gmdate ( "D, d M Y H:i:s" );
+		// header("Expires: Tue, 03 Jul 2001 06:00:00 GMT");
+		header ( "Cache-Control: max-age=0, no-cache, must-revalidate, proxy-revalidate" );
+		header ( "Last-Modified: {$now} GMT" );
+		// force download
+		header ( "Content-Type: application/force-download" );
+		header ( "Content-Type: application/octet-stream" );
+		// comentario sin sentido
+		header ( "Content-Type: application/download" );
+		// disposition / encoding on response body
+		header ( "Content-Disposition: attachment;filename={$filename}" );
+		header ( "Content-Transfer-Encoding: binary" );
+	}
 }

@@ -34,6 +34,13 @@ $this->registerJsFile(
 
 
 ?>
+<div class="row">
+  <div class="col-md-12">
+    <a class="btn btn-success float-right" target="_blank" href="<?=Url::base()?>/administrador/descargar-info">
+      Descargar información
+    </a>
+  </div>
+</div>  
 <div class="page-content manager-image">
   
     <?php
